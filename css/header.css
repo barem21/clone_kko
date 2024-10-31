@@ -1,10 +1,19 @@
-header{background:#fff;}
+header{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    border-bottom:1px solid #eee;
+    box-sizing:border-box;
+    background:#fff;
+    z-index:100;
+}
 header{
     .header-wrap{
         display:flex;
         max-width:1170px;
         margin:0 auto;
-        padding:20px 0px 45px;
+        padding:18px 0px;
         align-items:center;
         justify-content:space-between;
     }
@@ -22,7 +31,7 @@ header{
     .nav{
         display:flex;
         align-items:center;
-        gap:25px;
+        gap:28px;
     }
     .nav a{
         color:#121212;
@@ -31,6 +40,7 @@ header{
     }
     .nav button{
         width:24px;
+        height:24px;
         border:none;
         background:none;
         cursor:pointer;
