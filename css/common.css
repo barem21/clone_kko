@@ -6,12 +6,16 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-size:14px;
     /* outline-style:none; */
+}
+html{
+    font-size:14px;
+    overflow-x:hidden;
 }
 body{
     background-color:#fff;
     color:#1e1e1e;
+    font-size:14px;
     font-family:"Inter","Noto Sans KR",sans-serif;
     font-style:normal;
     font-weight:400;
@@ -19,11 +23,14 @@ body{
 }
 a{
     color:#1e1e1e;
+    font-family:"Inter","Noto Sans KR",sans-serif;
     text-decoration:none;
 }
-ul,li{
+ul,ol,li{
     list-style:none;
     margin:0;
     padding:0;
 }
-img{max-width:100%;}
+img{
+    max-width:100%;
+}

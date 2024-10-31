@@ -1,7 +1,7 @@
 main{
     .main-wrap{
         max-width:1170px;
-        margin:100px auto 50px auto;
+        margin:100px auto;
     }
     .main-slide{
         display:flex;
