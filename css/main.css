@@ -1,0 +1,111 @@
+main{padding-bottom:20px;}
+main{
+    .main-wrap{
+        max-width:1170px;
+        margin:0 auto;
+    }
+    .main-slide{
+        display:flex;
+        justify-content:space-between;
+        gap:30px;
+        padding-bottom:60px;
+    }
+    .main-slide .slide-left{
+        width:770px;
+        border-radius:20px;
+        background-color:#aaa;
+        font-size:0px;
+        overflow:hidden;
+    }
+    .main-slide .slide-right{
+        width:400px;
+        border-radius:20px;
+        background-color:#ddd;
+        font-size:0px;
+        overflow:hidden;
+    }
+    .visual-slide,
+    .card-slide{
+        height:100%;
+    }
+    .visual-slide img,
+    .card-slide img{
+        height:100%;
+    }
+
+    .main-contents{
+        display:flex;
+        gap:30px;
+        justify-content:space-between;
+    }
+    .main-contents .contents-left{
+        width:870px;
+        /* background-color:#aaa; */
+    }
+    .main-contents h4.list-title{
+        margin-bottom:30px;
+        color:#121212;
+        font-size:24px;
+    }
+    .main-contents .list-new-wrap{
+        padding-bottom:0px;
+    }
+    .main-contents .list-thum-wrap .list-group{
+        display:flex;
+        justify-content:space-between;
+        gap:30px;
+        margin-bottom:50px;
+    }
+    .main-contents .list-thum-wrap .list-group .thum{
+        width:260px;
+    }
+    .main-contents .list-thum-wrap .list-group .thum-img{
+        margin-bottom:15px;
+        border-radius:20px;
+        font-size:0px;
+        overflow:hidden;
+    }
+    .main-contents .list-thum-wrap .list-group .thum-img img{
+        object-fit:cover;
+    }
+    .main-contents .list-thum-wrap .list-group .thum-cate{
+        display:flex;
+        align-items:center;
+        gap:5px;
+        margin-bottom:10px;
+    }
+    .main-contents .list-thum-wrap .list-group .thum-cate img{
+        width:24px;
+    }
+    .main-contents .list-thum-wrap .list-group .thum-cate span{
+        color:#7738ff;
+        font-size:14px;
+        font-weight:700;
+        letter-spacing:0px;
+    }
+    .main-contents .list-thum-wrap .list-group .thum-title{
+        margin-bottom:30px;
+        font-size:20px;
+        font-weight:700;
+    }
+    .main-contents .list-thum-wrap .list-group .thum-date{
+        color:#ccc;
+        font-size:14px;
+    }
+    .main-contents .contents-left .banner{
+        margin-bottom:50px;
+        border-radius:20px;
+        overflow:hidden;
+    }
+    .main-contents .contents-left .banner a{
+        display:block;
+        font-size:0px;
+    }
+    .main-contents .contents-left .banner img{
+        object-fit:cover;
+    }
+    .main-contents .contents-right{
+        width:300px;
+        background-color:#ddd;
+    }
+}
