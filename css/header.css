@@ -3,46 +3,44 @@ header{
     top:0px;
     left:0px;
     width:100%;
-    border-bottom:1px solid #eee;
-    box-sizing:border-box;
     background:#fff;
+    border-bottom:1px solid #fff;
+    box-sizing:border-box;
     z-index:100;
 }
-header{
-    .header-wrap{
-        display:flex;
-        max-width:1170px;
-        margin:0 auto;
-        padding:18px 0px;
-        align-items:center;
-        justify-content:space-between;
-    }
-    .header-logo{
-        display:flex;
-        align-items:center;
-        gap:10px;
-    }
-    .header-logo a{
-        width:88px;
-    }
-    .change-logo{
-        width:68px;
-    }
-    .nav{
-        display:flex;
-        align-items:center;
-        gap:28px;
-    }
-    .nav a{
-        color:#121212;
-        font-size:16px;
-        font-weight:700;
-    }
-    .nav button{
-        width:24px;
-        height:24px;
-        border:none;
-        background:none;
-        cursor:pointer;
-    }
+.header-wrap{
+    display:flex;
+    padding:18px 5px;
+    margin:0 auto;
+    max-width:1180px;
+    align-items:center;
+    justify-content:space-between;
+}
+.header-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.header-logo a{
+    width:88px;
+}
+.change-logo{
+    width:68px;
+}
+.nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+.nav a{
+    color:#121212;
+    font-weight:700;
+    font-size:16px;
+}
+.nav button{
+    width:24px;
+    height:24px;
+    border:none;
+    background:none;
+    cursor:pointer;
 }

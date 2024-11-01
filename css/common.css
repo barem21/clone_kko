@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 *{
-    margin:0;
     padding:0;
+    margin:0;
     box-sizing:border-box;
     /* outline-style:none; */
 }
@@ -13,13 +13,12 @@ html{
     overflow-x:hidden;
 }
 body{
-    background-color:#fff;
     color:#1e1e1e;
+    font-weight:400;
     font-size:14px;
     font-family:"Inter","Noto Sans KR",sans-serif;
+    background-color:#fff;
     font-style:normal;
-    font-weight:400;
-    font-optical-sizing:auto;
 }
 a{
     color:#1e1e1e;
@@ -28,8 +27,8 @@ a{
 }
 ul,ol,li{
     list-style:none;
-    margin:0;
     padding:0;
+    margin:0;
 }
 img{
     max-width:100%;
