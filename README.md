@@ -107,6 +107,7 @@ postcss sorting 검색 후 더블클릭해서 단축키 설정 추가 (Ctrl + Sh
 
 ## 7. 파비콘(favicon) 설정
 
+- 파비콘 생성 : https://realfavicongenerator.net
 - &lt;head&gt; 안에 추가
 
 ```
