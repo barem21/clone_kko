@@ -1,0 +1,130 @@
+.main-contents {
+  display: flex;
+  gap: 2.542vw;
+  justify-content: space-between;
+}
+.main-contents h4.list-title {
+  color: #121212;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.contents-left {
+  width: 73.728vw;
+  max-width: 870px;
+}
+.list-new-wrap {
+  padding-bottom: 0px;
+}
+.list-thum-wrap .list-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.542vw;
+  margin-bottom: 50px;
+}
+.list-thum-wrap .list-group .thum {
+  width: 23.728vw;
+  max-width: 260px;
+}
+.list-thum-wrap .list-group .thum:hover .thum-img {
+  /* 좌표 움직이기 */
+  transform: translateY(-10px);
+  filter: drop-shadow(0px 20px 40px #bdc4d3);
+}
+.list-thum-wrap .list-group .thum-img {
+  height: 16.949vw;
+  font-size: 0px;
+  max-height: 200px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.list-thum-wrap .list-group .thum-img img {
+  height: 100%;
+  object-fit: cover;
+}
+.list-thum-wrap .list-group .thum-cate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.list-thum-wrap .list-group .thum-cate img {
+  width: 24px;
+}
+.list-thum-wrap .list-group .thum-cate span {
+  color: #7738ff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0px;
+}
+.list-thum-wrap .list-group .thum-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.list-thum-wrap .list-group .thum-date {
+  color: #ccc;
+  font-size: 14px;
+}
+.list-btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+.list-btn-wrap .btn {
+  padding: 10px 20px;
+  border: 1px solid #1e1e1e;
+  background: none;
+  font-weight: 700;
+  font-family: "Inter", "Noto Sans KR", sans-serif;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.list-btn-wrap .btn:hover {
+  background: #1e1e1e;
+  color: #fff;
+}
+.contents-left .banner {
+  margin-bottom: 50px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.contents-left .banner a {
+  display: block;
+  max-height: 160px;
+  font-size: 0px;
+}
+.contents-left .banner img {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .contents-left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .list-thum-wrap .list-group {
+    display: block;
+    gap: 0vw;
+  }
+  .list-thum-wrap .list-group .thum {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .list-thum-wrap .list-group .thum-img {
+    height: 74.21vw;
+    max-height: 760px;
+  }
+
+  .contents-left .banner a {
+    height: 13.559vw;
+  }
+  .contents-right {
+    display: none;
+  }
+}

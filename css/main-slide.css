@@ -1,0 +1,46 @@
+.main-slide {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.542vw;
+  padding-bottom: 60px;
+}
+.slide-left {
+  width: 65.254vw;
+  max-width: 770px;
+  font-size: 0px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.slide-right {
+  width: 33.898vw;
+  max-width: 400px;
+  font-size: 0px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.visual-slide,
+.card-slide {
+  height: 100%;
+}
+.visual-slide img,
+.card-slide img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 모바일 버전 */
+@media screen and (max-width: 1024px) {
+  .main-slide {
+    display: block;
+    gap: 0px;
+  }
+  .slide-left {
+    width: 100%;
+    height: 100vw;
+    max-width: 100%;
+  }
+  .slide-right {
+    display: none;
+  }
+}
+/* 모바일 버전 */
