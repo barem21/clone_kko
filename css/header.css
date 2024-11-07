@@ -53,7 +53,7 @@ header {
   display: none;
 }
 .bg-mbmenu {
-  /*display: none;*/
+  display: none;
   visibility: hidden;
   position: fixed;
   top: 0px;
@@ -62,7 +62,7 @@ header {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.5s;
   z-index: 99;
 }
 .bg-mbmenu-active {
@@ -79,14 +79,14 @@ header {
   left: 0px;
   padding: 0px 40px 40px 40px;
   background-color: #fff;
-  transition: all 0.3s;
-  transition-delay: 0.15s;
+  transition: all 0.5s;
+  /* transition-delay: 0.15s; */
   z-index: 100;
 }
 .list-mbmenu-active {
   height: 150px !important;
   visibility: visible !important;
-  /*display: block !important;*/
+  display: block !important;
 }
 .list-mbmenu a {
   display: block;
