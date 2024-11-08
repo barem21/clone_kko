@@ -94,8 +94,8 @@
 }
 .contents-left .banner a {
   display: block;
-  max-height: 160px;
   font-size: 0px;
+  max-height: 160px;
 }
 .contents-left .banner img {
   object-fit: cover;
@@ -133,12 +133,18 @@
   }
   .mob-contents-slide {
     display: block;
+    overflow: hidden;
   }
-  .mob-contents-slide .list-card {
+  .mob-contents-slide .swiper {
+    overflow: initial;
+  }
+  .mob-contents-slide .mob-list-card {
     display: flex;
     gap: 20px;
+    width: 1160px;
   }
-  .mob-contents-slide .list-card a {
+  .mob-contents-slide .mob-list-card a {
+    display: block;
     min-width: 240px;
   }
 }

@@ -6,15 +6,15 @@
 }
 .slide-left {
   width: 65.254vw;
-  max-width: 770px;
   font-size: 0px;
+  max-width: 770px;
   border-radius: 20px;
   overflow: hidden;
 }
 .slide-right {
   width: 33.898vw;
-  max-width: 400px;
   font-size: 0px;
+  max-width: 400px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -26,6 +26,24 @@
 .card-slide img {
   height: 100%;
   object-fit: cover;
+}
+
+.main-slide .swiper-pagination {
+  bottom: 30px;
+}
+.main-slide .swiper-pagination-bullet {
+  width: 4px;
+  height: 4px;
+  margin: 0px 2px !important;
+  border-radius: 4px;
+  background-color: #fff;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+.main-slide .swiper-pagination-bullet-active {
+  width: 20px;
+  background-color: #fff;
+  opacity: 1;
 }
 
 /* 모바일 버전 */

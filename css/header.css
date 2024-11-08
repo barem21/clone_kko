@@ -31,6 +31,9 @@ header {
 .change-logo {
   width: 68px;
 }
+.change-logo img {
+  object-fit: cover;
+}
 .nav {
   display: flex;
   align-items: center;

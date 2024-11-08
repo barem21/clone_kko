@@ -13,7 +13,7 @@
 window.addEventListener("load", function () {
   //모바일 메뉴 클릭시 아이콘 이미지 바꾸기(img src="경로")
   // 1. 버튼 역할하는 id 찾기
-  //const mobileButton = document.querySelector("#btn-mbmenu");
+  const mobileButton = document.querySelector("#btn-mbmenu");
   //console.log(mobileButton);
 
   // 2. 버튼 안의 img 찾기
