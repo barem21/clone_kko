@@ -1,213 +1,519 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kakaobrain Blog</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/footer.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./images/icon/cropped-main-shape-32x32.png"
+      type="image/x-icon"
+    />
+    <title>kakaobrain Blog Clone Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" /> -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main-slide.css" />
+    <link rel="stylesheet" href="./css/main-content.css" />
+    <link rel="stylesheet" href="./css/card-list.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script language="javascript" src="./js/header.js"></script>
+    <script language="javascript" src="./js/main.js"></script>
+    <script language="javascript" src="./js/footer.js"></script>
+
+    <script language="javascript" src="./js/slide-main.js"></script>
+    <script language="javascript" src="./js/slide-logo.js"></script>
+    <script language="javascript" src="./js/slide-card.js"></script>
+  </head>
+
+  <body>
     <!-- 상단 부분 -->
     <header class="header">
-        <div class="header-wrap">
-            <!-- 로고 -->
-            <div class="header-logo">
-                <a href="/"><img src="./images/etc/logo-kakao.png" alt="kakaobrain" /></a>
-                <div class="change-logo">
-                    <img src="./images/etc/logo-blog01.png" alt="blog" />
-                </div>
+      <div class="header-wrap">
+        <!-- 로고 -->
+        <div class="header-logo">
+          <a href="/"
+            ><img src="./images/etc/logo-kakao.png" alt="kakaobrain"
+          /></a>
+          <div class="swiper change-logo">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog01.png" alt="blog" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog02.png" alt="blog" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog03.png" alt="blog" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog04.png" alt="blog" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog05.png" alt="blog" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog06.png" alt="blog" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog07.png" alt="blog" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog08.png" alt="blog" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog09.png" alt="blog" />
+              </div>
             </div>
-            <!-- 네비게이션 메뉴 -->
-            <div class="nav">
-                <a href="#">소식</a>
-                <a href="#">팀 & 크루</a>
-                <a href="#">영입</a>
-                <button id="btn-search">
-                    <img src="./images/icon/icon-search.png" alt="검색" />
-                </button>
-            </div>
+          </div>
         </div>
+        <!-- 네비게이션 메뉴 -->
+        <div class="nav">
+          <a href="#">소식</a>
+          <a href="#">팀 & 크루</a>
+          <a href="#">영입</a>
+          <button id="btn-search">
+            <img src="./images/icon/icon-search.png" alt="검색" />
+          </button>
+
+          <!-- 모바일 메뉴 -->
+          <button id="btn-mbmenu">
+            <img src="./images/icon/icon-hbr.png" alt="모바일 메뉴" />
+          </button>
+        </div>
+      </div>
     </header>
+
+    <!-- 모바일용 메뉴 부분 -->
+    <div class="bg-mbmenu"></div>
+    <ul class="list-mbmenu">
+      <li><a href="#">소식</a></li>
+      <li><a href="#">팀 & 크루</a></li>
+      <li><a href="#">영입</a></li>
+    </ul>
 
     <!-- 중단 부분 -->
     <main class="main">
-        <div class="main-wrap">
-            <div class="main-slide">
-                <!-- 메인 슬라이드 -->
-                <div class="slide-left">
-                    <div class="visual-slide">
-                        <a href="#">
-                            <img src="./images/b1.png" alt="배너이미지-1" />
-                        </a>
-                    </div>
+      <div class="main-wrap">
+        <div class="main-slide">
+          <!-- 메인 슬라이드 -->
+          <div class="slide-left">
+            <!-- @start 비주얼 슬라이드 -->
+            <div class="swiper visual-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b1.png" alt="배너이미지-1" />
+                  </a>
                 </div>
-                <!-- 카드 슬라이드 -->
-                <div class="slide-right">
-                    <div class="card-slide">
-                        <a href="#">
-                            <img src="./images/c3.png" alt="카드배너-1" />
-                        </a>
-                    </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b2.png" alt="배너이미지-2" />
+                  </a>
                 </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b3.png" alt="배너이미지-3" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b4.png" alt="배너이미지-4" />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-
-            <div class="main-contents">
-                <!-- 중단 왼쪽 부분 -->
-                <div class="contents-left">
-                    <div class="list-new-wrap">
-                        <h4 class="list-title">NEW. 따끈따끈 새로 나온 글 🔥</h4>
-                        <div class="list-thum-wrap">
-                            <!-- 게시글 목록 -->
-                            <div class="list-group">
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_aihealthcare.png" alt="icon" />
-                                        <span>AI Healthcare</span>
-                                    </div>
-                                    <h5 class="thum-title">카카오브레인이 헬스케어를 하는 이유? (Feat. 최윤섭의 디지털헬스케어)</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_krew.png" alt="icon" />
-                                        <span>Krew</span>
-                                    </div>
-                                    <h5 class="thum-title">Transformer 기반 AI 가속 프레임워크 ALiBi FlashAttention 공개</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_llms.png" alt="icon" />
-                                        <span>LLMs</span>
-                                    </div>
-                                    <h5 class="thum-title">카카오브레인이 헬스케어를 하는 이유?</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="banner">
-                        <a href="#"><img src="./images/1pc.png" alt="" /></a>
-                    </div>
-
-                    <div class="list-pick-wrap">
-                        <h4 class="list-title">Editor's Pick 🏃🏻‍♀️🏃‍♂️🏃🏽</h4>
-                        <div class="list-thum-wrap">
-                            <!-- 게시글 목록 -->
-                            <div class="list-group">
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_aihealthcare.png" alt="icon" />
-                                        <span>AI Healthcare</span>
-                                    </div>
-                                    <h5 class="thum-title">카카오브레인이 헬스케어를 하는 이유? (Feat. 최윤섭의 디지털헬스케어)</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_krew.png" alt="icon" />
-                                        <span>Krew</span>
-                                    </div>
-                                    <h5 class="thum-title">Transformer 기반 AI 가속 프레임워크 ALiBi FlashAttention 공개</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_krew.png" alt="icon" />
-                                        <span>Krew</span>
-                                    </div>
-                                    <h5 class="thum-title">카카오브레인이 헬스케어를 하는 이유?</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="list-thum-wrap">
-                            <!-- 게시글 목록 -->
-                            <div class="list-group">
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_aihealthcare.png" alt="icon" />
-                                        <span>AI Healthcare</span>
-                                    </div>
-                                    <h5 class="thum-title">카카오브레인이 헬스케어를 하는 이유? (Feat. 최윤섭의 디지털헬스케어)</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_krew.png" alt="icon" />
-                                        <span>Krew</span>
-                                    </div>
-                                    <h5 class="thum-title">Transformer 기반 AI 가속 프레임워크 ALiBi FlashAttention 공개</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                                <a href="#" class="thum">
-                                    <div class="thum-img">
-                                        <img src="./images/c1.jpg" alt="" />
-                                    </div>
-                                    <div class="thum-cate">
-                                        <img src="./images/icon/ic_krew.png" alt="icon" />
-                                        <span>Krew</span>
-                                    </div>
-                                    <h5 class="thum-title">카카오브레인이 헬스케어를 하는 이유?</h5>
-                                    <span class="thum-date">2024.10.29</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 더보기 버튼 -->
-                        <div class="list-btn-wrap">
-                            <button id="btn-more" class="btn">더보기</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 중단 오른쪽 부분 -->
-                <div class="contents-right">
-                    <h4 class="list-title">폴더 📁</h4>
-                </div>
+            <!-- @end 비주얼 슬라이드 -->
+          </div>
+          <!-- 카드 슬라이드 -->
+          <div class="slide-right">
+            <div class="card-slide">
+              <a href="#">
+                <img src="./images/c3.png" alt="카드배너-1" />
+              </a>
             </div>
+          </div>
         </div>
+
+        <div class="main-contents">
+          <!-- 중단 왼쪽 부분 -->
+          <div class="contents-left">
+            <div class="list-new-wrap">
+              <h4 class="list-title">NEW. 따끈따끈 새로 나온 글 🔥</h4>
+              <div class="list-thum-wrap">
+                <!-- 게시글 목록 -->
+                <div class="list-group">
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_aihealthcare.png" alt="icon" />
+                      <span>AI Healthcare</span>
+                    </div>
+                    <h5 class="thum-title">
+                      카카오브레인이 헬스케어를 하는 이유? (Feat. 최윤섭의
+                      디지털헬스케어)
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_krew.png" alt="icon" />
+                      <span>Krew</span>
+                    </div>
+                    <h5 class="thum-title">
+                      Transformer 기반 AI 가속 프레임워크 ALiBi FlashAttention
+                      공개
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_llms.png" alt="icon" />
+                      <span>LLMs</span>
+                    </div>
+                    <h5 class="thum-title">
+                      카카오브레인이 헬스케어를 하는 이유?
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="banner">
+              <a href="#"><img src="./images/1pc.png" alt="" /></a>
+            </div>
+
+            <div class="list-pick-wrap">
+              <h4 class="list-title">Editor's Pick 🏃🏻‍♀️🏃‍♂️🏃🏽</h4>
+              <div class="list-thum-wrap">
+                <!-- 게시글 목록 -->
+                <div class="list-group">
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_aihealthcare.png" alt="icon" />
+                      <span>AI Healthcare</span>
+                    </div>
+                    <h5 class="thum-title">
+                      카카오브레인이 헬스케어를 하는 이유? (Feat. 최윤섭의
+                      디지털헬스케어)
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_krew.png" alt="icon" />
+                      <span>Krew</span>
+                    </div>
+                    <h5 class="thum-title">
+                      Transformer 기반 AI 가속 프레임워크 ALiBi FlashAttention
+                      공개
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_krew.png" alt="icon" />
+                      <span>Krew</span>
+                    </div>
+                    <h5 class="thum-title">
+                      카카오브레인이 헬스케어를 하는 이유?
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="list-thum-wrap">
+                <!-- 게시글 목록 -->
+                <div class="list-group">
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_aihealthcare.png" alt="icon" />
+                      <span>AI Healthcare</span>
+                    </div>
+                    <h5 class="thum-title">
+                      카카오브레인이 헬스케어를 하는 이유? (Feat. 최윤섭의
+                      디지털헬스케어)
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_krew.png" alt="icon" />
+                      <span>Krew</span>
+                    </div>
+                    <h5 class="thum-title">
+                      Transformer 기반 AI 가속 프레임워크 ALiBi FlashAttention
+                      공개
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                  <a href="#" class="thum">
+                    <div class="thum-img">
+                      <img src="./images/c1.jpg" alt="" />
+                    </div>
+                    <div class="thum-cate">
+                      <img src="./images/icon/ic_krew.png" alt="icon" />
+                      <span>Krew</span>
+                    </div>
+                    <h5 class="thum-title">
+                      카카오브레인이 헬스케어를 하는 이유?
+                    </h5>
+                    <span class="thum-date">2024.10.29</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- 더보기 버튼 -->
+              <div class="list-btn-wrap">
+                <button id="btn-more" class="btn">더보기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 중단 오른쪽 부분 -->
+          <div class="contents-right">
+            <h4 class="list-title">폴더 📁</h4>
+
+            <!-- 카드 목록 -->
+            <div class="list-card">
+              <!-- @Start card -->
+              <a href="#" class="card-loop">
+                <div class="card-img"><img src="./images/p1.png" alt="" /></div>
+                <div class="card-info">
+                  <h5 class="card-title">AI Healthcare</h5>
+                  <span class="card-count">10</span>
+                </div>
+              </a>
+              <a href="#" class="card-loop">
+                <div class="card-img"><img src="./images/p2.png" alt="" /></div>
+                <div class="card-info">
+                  <h5 class="card-title">Brain Cloud</h5>
+                  <span class="card-count">4</span>
+                </div>
+              </a>
+              <a href="#" class="card-loop">
+                <div class="card-img"><img src="./images/p3.png" alt="" /></div>
+                <div class="card-info">
+                  <h5 class="card-title">Karlo</h5>
+                  <span class="card-count">24</span>
+                </div>
+              </a>
+              <a href="#" class="card-loop">
+                <div class="card-img"><img src="./images/p4.png" alt="" /></div>
+                <div class="card-info">
+                  <h5 class="card-title">Krew</h5>
+                  <span class="card-count">25</span>
+                </div>
+              </a>
+              <a href="#" class="card-loop">
+                <div class="card-img"><img src="./images/p5.png" alt="" /></div>
+                <div class="card-info">
+                  <h5 class="card-title">LLMs</h5>
+                  <span class="card-count">3</span>
+                </div>
+              </a>
+              <!-- @End card -->
+            </div>
+
+            <!-- 더보기 버튼 -->
+            <div class="list-btn-wrap">
+              <button id="btn-more-card" class="btn">폴더 전체보기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 모바일용 카드 슬라이드 부분 -->
+        <div class="mob-contents-slide">
+          <h4 class="list-title">폴더 📁</h4>
+
+          <!-- 카드 목록 -->
+          <div class="swiper mob-list-card">
+            <!-- @Start card -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="card-loop">
+                  <div class="card-img">
+                    <img src="./images/p1.png" alt="" />
+                  </div>
+                  <div class="card-info">
+                    <h5 class="card-title">AI Healthcare</h5>
+                    <span class="card-count">10</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="card-loop">
+                  <div class="card-img">
+                    <img src="./images/p2.png" alt="" />
+                  </div>
+                  <div class="card-info">
+                    <h5 class="card-title">Brain Cloud</h5>
+                    <span class="card-count">4</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="card-loop">
+                  <div class="card-img">
+                    <img src="./images/p3.png" alt="" />
+                  </div>
+                  <div class="card-info">
+                    <h5 class="card-title">Karlo</h5>
+                    <span class="card-count">24</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="card-loop">
+                  <div class="card-img">
+                    <img src="./images/p4.png" alt="" />
+                  </div>
+                  <div class="card-info">
+                    <h5 class="card-title">Krew</h5>
+                    <span class="card-count">25</span>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="card-loop">
+                  <div class="card-img">
+                    <img src="./images/p5.png" alt="" />
+                  </div>
+                  <div class="card-info">
+                    <h5 class="card-title">LLMs</h5>
+                    <span class="card-count">3</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- @End card -->
+          </div>
+
+          <!-- 더보기 버튼 -->
+          <div class="list-btn-wrap">
+            <button id="btn-more-card" class="btn">폴더 전체보기</button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- 하단 부분 -->
-    <footer>
-        <div class="footer-wrap">
-            <div class="footer_left">
-                하단 왼쪽 부분
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-layout">
+          <!-- 하단 왼쪽 부분 -->
+          <div class="footer-left">
+            <div class="footer-logo">
+              <a href="#"
+                ><img src="./images/etc/logo-kakao-footer.png" alt="kakaobrain"
+              /></a>
             </div>
-            <div class="footer_right">
-                하단 오른쪽 부분
+            <div class="footer-text">
+              카카오브레인의 혁신은 모든 크루의 물음에서 시작합니다.<br />
+              AI 없이는 상상할 수 없는 세상을 만들기 위해선 생각하지 못한 많은
+              물음이 필요합니다.<br />
+              세상을 변화시킬 수 있는 새로운 물음을 던질 크루를 기다립니다.
             </div>
+            <div class="footer-btn">
+              <a
+                href="https://careers.kakaobrain.com/"
+                target="_blank"
+                class="btn-join"
+                >지원하러 가기</a
+              >
+            </div>
+          </div>
+
+          <!-- 하단 오른쪽 부분 -->
+          <div class="footer-right">
+            <div class="menu-left">
+              <dl class="menu-link">
+                <dt class="title">정보</dt>
+                <dd>
+                  <a href="#">영업페이지<i class="xi-arrow-up"></i></a>
+                </dd>
+                <dd><a href="#">이메일무단수집거부</a></dd>
+                <dd><a href="#">개인정보처리방침</a></dd>
+                <dd><a href="#">오시는 길</a></dd>
+              </dl>
+            </div>
+            <div class="menu-right">
+              <dl class="menu-link">
+                <dt class="title">문의</dt>
+                <dd><a href="#">영입</a></dd>
+                <dd><a href="#">PR</a></dd>
+                <dd><a href="#">마케팅·사업제휴</a></dd>
+              </dl>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="footer-copy">
+        <div class="footer-layout">
+          <!-- 카피라이트 왼쪽 부분 -->
+          <div class="copy-left">
+            <span class="copy">Kakao Brain Corp. @ All rights reserved.</span>
+          </div>
+          <!-- 카피라이트 오른쪽 부분 -->
+          <div class="copy-right">
+            <ul class="link-sns">
+              <li>
+                <a href="#" class="link-in"><i class="xi-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#" class="link-youtube"
+                  ><i class="xi-youtube-play"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="link-github"><i class="xi-github"></i></a>
+              </li>
+              <li>
+                <a href="#" class="link-facebook"
+                  ><i class="xi-facebook"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
