@@ -30,6 +30,7 @@ header {
 }
 .change-logo {
   width: 68px;
+  height: 30px;
 }
 .change-logo img {
   object-fit: cover;
@@ -101,6 +102,9 @@ header {
 
 /* 모바일 버전 */
 @media screen and (max-width: 1024px) {
+  .header-wrap {
+    padding: 0px 15px;
+  }
   .nav {
     gap: 15px;
   }
