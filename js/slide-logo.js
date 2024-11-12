@@ -34,33 +34,37 @@ window.addEventListener("load", function () {
       );
       //console.log(headerLogoTag);
       headerLogoTag.innerHTML = logoHtml;
+
+      // 4. swiper 생성 및 실행
+      const visualSwiper = new Swiper(".change-logo", {
+        effect: "fade",
+        loop: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        fadeEffect: {
+          crossFade: true,
+        },
+      });
+
+      //슬라이드 기본은 멈춤
+      visualSwiper.autoplay.stop();
+
+      //마우스 오버되면 자동 슬라이드 시작
+      headerLogoTag.addEventListener("mouseenter", function () {
+        visualSwiper.autoplay.start();
+      });
+
+      //마우스 아웃되면 자동 슬라이드 멈춤
+      headerLogoTag.addEventListener("mouseleave", function () {
+        visualSwiper.autoplay.stop();
+        visualSwiper.slideToLoop(0, 500); //첫번째 슬라이드로 이동
+      });
     })
     .catch(function (error) {
       console.log("오류발생:", error); //에러 확인
     });
 
   //const logoData;
-
-  const slideLogo = document.querySelector(".change-logo");
-  slideLogo.addEventListener("mouseenter", function () {
-    // 4. swiper 생성 및 실행
-    const visualSwiper = new Swiper(".change-logo", {
-      effect: "fade",
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      fadeEffect: {
-        crossFade: true,
-      },
-    });
-  });
-
-  /*
-  slideLogo.addEventListener("mouseleave", function () {
-    visualSwiper.slideToLoop(0, 500);
-    visualSwiper.autoplay.stop(); // 자동 슬라이드 전환 멈춤
-  });
-  */
 });
