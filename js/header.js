@@ -1,3 +1,64 @@
+//jQeury의 목적은 2가지
+//html 및 css 제어
+//외부데이터 연동
+
+//html과 css가 화면에 보일 준비가 끝나면
+//image, font, mp3, mp4 등 로딩 체크를 못함
+
+//window.addEventListener("DOMContentLoaded", function () {});
+$(document).ready(function () {
+  //header를 보관함에 담아둔다.
+  var header = $(".header");
+
+  //스크롤 체크하기
+  $(window).on("scroll", function () {
+    var scrollPositionY = $(window).scrollTop();
+
+    //스크롤 시작하면 header에 class추가/제거하기
+    if (scrollPositionY > 0) {
+      header.addClass("header-active");
+    } else {
+      header.removeClass("header-active");
+    }
+  });
+});
+
+$(document).ready(function () {
+  var mobileButton = $("#btn-mbmenu");
+  var mobileButtonImage = $("#btn-mbmenu img");
+  var mobileMenuBg = $(".bg-mbmenu");
+  var mobileMenu = $(".list-mbmenu");
+  var openIcon = "./images/icon/icon-hbr.png";
+  var closeIcon = "./images/icon/icon-close.png";
+
+  mobileButton.on("click", function () {
+    // src 교체하기
+    var imageSrc = mobileButtonImage.attr("src");
+    if (imageSrc == openIcon) {
+      mobileButtonImage.attr("src", closeIcon);
+      mobileMenuBg.addClass("bg-mbmenu-active");
+      mobileMenu.addClass("list-mbmenu-active");
+    } else {
+      mobileButtonImage.attr("src", openIcon);
+      mobileMenuBg.removeClass("bg-mbmenu-active");
+      mobileMenu.removeClass("list-mbmenu-active");
+    }
+  });
+
+  $(window).on("resize", function () {
+    //웹브라우저의 넓이 확인
+    var windowWith = $(window).innerWidth();
+    //console.log(windowWith);
+
+    // 반응형 처리가 1024px부터 동작될 경우
+    if (windowWith > 1024) {
+      mobileButtonImage.attr("src", openIcon);
+      mobileMenuBg.removeClass("bg-mbmenu-active");
+      mobileMenu.removeClass("list-mbmenu-active");
+    }
+  });
+});
+
 /*
 1. 보관함(var,let,const)을 만들겠다.
 - const : 상수, 절대 변하지 않는 보관함 (1순위로 사용)
@@ -10,7 +71,9 @@
 */
 
 //페이지 다 읽어들이면(load) 동작시작
+/*
 window.addEventListener("load", function () {
+  / *
   //모바일 메뉴 클릭시 아이콘 이미지 바꾸기(img src="경로")
   // 1. 버튼 역할하는 id 찾기
   const mobileButton = document.querySelector("#btn-mbmenu");
@@ -46,6 +109,7 @@ window.addEventListener("load", function () {
       mobileMenu.classList.remove("list-mbmenu-active");
     }
   });
+  * /
 
   //반응형 처리에 따른 아이콘 이미지, 메뉴상태 초기화 처리
   window.addEventListener("resize", function () {
@@ -64,10 +128,10 @@ window.addEventListener("load", function () {
 
 //페이지 다 읽어들이면(load) 동작시작
 window.addEventListener("load", function () {
-  /*
+  / *
   1. 사용자가 아래로 스크롤시 header 클래스 하단에 줄을 생성
   2. 사용자가 브라우저를 가장 위로 스크롤시 줄을 제거
-  */
+  * /
   const header = document.querySelector(".header");
   //console.log(header);
 
@@ -84,6 +148,7 @@ window.addEventListener("load", function () {
     }
   });
 });
+* /
 
 //페이지 다 읽어들이면(load) 동작시작
 window.addEventListener("load", function () {
@@ -94,3 +159,4 @@ window.addEventListener("load", function () {
     alert("open search");
   });
 });
+*/

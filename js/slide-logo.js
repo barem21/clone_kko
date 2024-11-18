@@ -1,3 +1,61 @@
+$(document).ready(function () {
+  var LOGO_DATA_URL = "/apis/logodata.json";
+
+  $.ajax({
+    url: LOGO_DATA_URL,
+    method: "GET",
+    datatype: "json",
+    success: function (result) {
+      var logoHtml = "";
+      for (let i = 0; i < result.length; i++) {
+        //var obj = result[i];
+        var data = "";
+        data += "<div class='swiper-slide'>";
+        data += "<img src='/images/etc/";
+        data += result[i].imgUrl;
+        data += "' alt='" + result[i].desc + "' />";
+        data += "</div>";
+        logoHtml += data;
+      }
+      //console.log(logoHtml);
+
+      // 3. 생성된 html을 원하는 곳에 배치
+      var headerLogoTag = $(".change-logo .swiper-wrapper");
+      //console.log(headerLogoTag);
+      headerLogoTag.html(logoHtml);
+
+      // 4. swiper 생성 및 실행
+      var visualSwiper = new Swiper(".change-logo", {
+        effect: "fade",
+        loop: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        fadeEffect: {
+          crossFade: true,
+        },
+      });
+
+      //슬라이드 기본은 멈춤
+      visualSwiper.autoplay.stop();
+
+      //마우스 오버되면 자동 슬라이드 시작
+      headerLogoTag.on("mouseover", function () {
+        visualSwiper.autoplay.start();
+      });
+
+      //마우스 아웃되면 자동 슬라이드 멈춤
+      headerLogoTag.on("mouseout", function () {
+        visualSwiper.autoplay.stop();
+        visualSwiper.slideToLoop(0, 500); //첫번째 슬라이드로 이동
+      });
+    },
+    error: function (error) {},
+  });
+});
+
+/*
 window.addEventListener("load", function () {
   //MockData
   //{imgUrl:"경로", desc:"설명문"}
@@ -68,3 +126,4 @@ window.addEventListener("load", function () {
 
   //const logoData;
 });
+*/
