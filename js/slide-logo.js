@@ -41,12 +41,12 @@ $(document).ready(function () {
       visualSwiper.autoplay.stop();
 
       //마우스 오버되면 자동 슬라이드 시작
-      headerLogoTag.on("mouseover", function () {
+      headerLogoTag.on("mouseenter", function () {
         visualSwiper.autoplay.start();
       });
 
       //마우스 아웃되면 자동 슬라이드 멈춤
-      headerLogoTag.on("mouseout", function () {
+      headerLogoTag.on("mouseleave", function () {
         visualSwiper.autoplay.stop();
         visualSwiper.slideToLoop(0, 500); //첫번째 슬라이드로 이동
       });
