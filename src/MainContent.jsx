@@ -2,6 +2,7 @@ import React from "react";
 import ListNewWrap from "./ListNewWrap";
 import Banner from "./Banner";
 import ListCateWrap from "./ListCateWrap";
+import MainCard from "./MainCard";
 
 function MainContent() {
   return (
@@ -16,7 +17,10 @@ function MainContent() {
         {/* 크루 */}
         <ListCateWrap></ListCateWrap>
       </div>
-      <div className="right">{/* 카드들 */}</div>
+      <div className="right">
+        {/* 카드들 */}
+        <MainCard></MainCard>
+      </div>
     </div>
   );
 }
